@@ -1820,16 +1820,20 @@ button:hover {
         height: auto;
     }
 
+    .medical-grid,
     .tech-grid {
     grid-template-columns: repeat(2, 1fr);
        /* ←2列 */
     gap: 15px;
     }
+    .medical-flow,
     .roadmap {
-    grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         /* ←2列 */
         gap: 15px;
     }
+    .medical-stats-grid,
     .stats-grid{
         grid-template-columns: repeat(2, 1fr);
             /* ←2列 */
