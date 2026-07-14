@@ -1,0 +1,1838 @@
+/* ===== 基本 ===== */
+body {
+    margin: 0;
+    padding: 0 1em;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* ===== スライダー ===== */
+#slider {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 2s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* ===== ヘッダー ===== */
+header {
+    height: 80px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+/* ナビ */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* 下線アニメーション */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #1d3d72;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1d3d72;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== 見出し ===== */
+.section-title {
+    font-size: 28px;
+    background-color: #1d3d72;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+/* ===== カードエリア ===== */
+.card-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== カード ===== */
+.card {
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+    transition: transform 0.15s ease;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+    padding: 15px;
+    margin: 0;
+}
+
+/* ===== リンク ===== */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== ボタン ===== */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1d3d72;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #16305a;
+    transform: translateY(-2px);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== 画像（menu-item） ===== */
+.menu-item {
+    width: 300px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== 施設カード ===== */
+.facility {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.facility img {
+    width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.text {
+    flex: 1;
+}
+
+/* ===== iframe ===== */
+iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* ===== テーブル ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: navy;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* ===== details ===== */
+details {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+summary {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+summary:hover {
+    color: navy;
+}
+
+/* ===== モバイル対応 ===== */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    #slider {
+        height: 250px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .facility {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .facility img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+.event-hero {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
+        url("images/event.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.event-hero h1 {
+
+    font-size: 55px;
+    margin-bottom: 15px;
+    color: navy;
+
+}
+
+.event-hero p {
+
+    font-size: 20px;
+
+}
+
+.events {
+
+    width: 85%;
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+
+}
+
+/* リンク */
+
+.event-link {
+
+    text-decoration: none;
+    color: inherit;
+    display: block;
+
+}
+
+.event-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+
+    transition: .3s;
+
+}
+
+.event-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.event-card img {
+
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+
+}
+
+.event-card h2 {
+
+    color: #1d3d72;
+
+    padding: 20px 20px 10px;
+
+}
+
+.event-card p {
+
+    padding: 0 20px 20px;
+
+    line-height: 1.8;
+
+}
+
+/*==========================
+イベント詳細ページ
+==========================*/
+
+.detail-hero {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("images/entrance2.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    text-align: center;
+}
+
+.detail-hero h1 {
+
+    font-size: 50px;
+    color :navy;
+
+}
+
+.detail-hero p {
+
+    font-size: 22px;
+
+    margin-top: 15px;
+
+}
+
+.event-detail {
+
+    width: 80%;
+
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+
+}
+
+.event-detail img {
+
+    width: 400px;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+.event-detail h2 {
+
+    color: #1d3d72;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+.event-detail p {
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+}
+
+.event-btn {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 35px;
+
+    background: #d77b2c;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 40px;
+
+    transition: .3s;
+
+}
+
+.event-btn:hover {
+
+    background: #b8651d;
+
+}
+
+@media(max-width:768px) {
+
+    .detail-hero {
+
+        height: 220px;
+
+    }
+
+    .detail-hero h1 {
+
+        font-size: 36px;
+
+    }
+
+    .detail-hero p {
+
+        font-size: 16px;
+
+    }
+
+    .event-detail {
+
+        width: 95%;
+
+        padding: 20px;
+
+    }
+
+    .event-detail img {
+
+        height: 220px;
+
+    }
+}
+
+.opencampus-hero {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("images/opencampus2.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+}
+
+.opencampus-hero h1 {
+
+    font-size: 50px;
+    color:navy;
+
+}
+
+.opencampus-hero p {
+
+    font-size: 22px;
+
+    margin-top: 15px;
+
+}
+
+/*==========================
+大学祭ページ
+==========================*/
+
+.festival-hero {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("images/festival.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+}
+
+.festival-hero h1 {
+
+    font-size: 50px;
+    color:navy;
+
+}
+
+.festival-hero p {
+
+    font-size: 22px;
+
+    margin-top: 15px;
+
+}
+
+/*==========================
+  クリスマスイベントページ
+==========================*/
+
+.christmas-hero {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("images/christmas2.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+}
+
+.christmas-hero h1 {
+
+    font-size: 50px;
+    color:navy;
+
+}
+
+.christmas-hero p {
+
+    font-size: 22px;
+
+    margin-top: 15px;
+
+}
+
+/* 背景 */
+
+.facility-hero {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.331), rgba(0, 0, 0, 0.331)),
+        url(images/background.png);
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    height: 700px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/* カード */
+
+.facility-overlay {
+
+    display: flex;
+
+    gap: 40px;
+
+}
+
+.facility-card {
+
+    width: 320px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+
+    transition: transform .3s ease;
+
+    cursor: pointer;
+}
+
+.facility-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+}
+
+.facility-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.facility-card-link:hover .facility-card {
+    transform: translateY(-10px);
+}
+
+.facility-card h2 {
+
+    padding: 20px;
+
+}
+
+.facility-card p {
+
+    padding: 0 20px 25px;
+
+}
+
+/* 下 */
+
+.bottom {
+
+    background: #eee;
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+button {
+
+    margin-top: 20px;
+
+    background: #504942;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 40px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: background .3s, transform .3s;
+}
+
+button:hover {
+    background: #1d3d72;
+    transform: scale(1.05);
+}
+
+.faculty-hero {
+    position: relative;
+}
+
+.faculty-hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.faculty-title {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    color: white;
+
+    background: rgba(0, 0, 0, .4);
+    border-left: 8px solid #4a90e2;
+
+    padding: 25px 35px;
+    border-radius: 10px;
+
+    animation: slideIn 1s ease-out forwards;
+
+    max-width: 500px;
+}
+
+.faculty-title h2 {
+    font-size: clamp(2rem, 5vw, 60px);
+}
+
+.facility-intro,
+.facility-fields,
+.curriculum,
+.research,
+.career {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.facility-intro h2,
+.facility-fields h2,
+.curriculum h2,
+.research h2,
+.career h2 {
+    border-left: 6px solid #1d3d72;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* =========================
+   TECH FIELD
+========================= */
+
+.section-sub {
+
+    color: #666;
+
+    margin-bottom: 35px;
+
+}
+
+
+.tech-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.tech-card {
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #eef5ff);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #dbe5f5;
+
+    transition: .3s;
+
+    min-height: 230px;
+
+}
+
+
+.tech-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(29, 61, 114, .2);
+
+    border-color: #4a90e2;
+
+}
+
+
+.tech-card span {
+
+    color: #4a90e2;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.tech-card h3 {
+
+    margin: 15px 0;
+
+    color: #1d3d72;
+
+}
+
+/* =========================
+   RESEARCH ROADMAP
+========================= */
+
+
+.roadmap {
+
+    display: flex;
+
+    gap: 20px;
+
+    position: relative;
+
+}
+
+
+.step {
+
+    flex: 1;
+
+    background:
+        linear-gradient(135deg,
+            #1d3d72,
+            #4a90e2);
+
+    color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+
+.step:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .25);
+
+}
+
+
+.step span {
+
+    display: block;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #bde8ff;
+
+}
+
+
+.step h3 {
+
+    margin: 15px 0;
+
+}
+
+
+
+
+
+/* =========================
+   FUTURE LAB
+========================= */
+
+
+.lab-images {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+}
+
+
+.lab-images img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    transition: .3s;
+
+}
+
+
+.lab-images img:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 10px 30px rgba(29, 61, 114, .3);
+
+}
+
+
+
+
+
+/* =========================
+   CAREER PATH
+========================= */
+
+
+.career ul {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+
+.career li {
+
+    list-style: none;
+
+    background: #1d3d72;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    transition: .3s;
+
+}
+
+
+.career li:hover {
+
+    background: #4a90e2;
+
+    transform: translateY(-5px);
+
+}
+
+/* =========================
+   DATA OF INFORMATICS
+========================= */
+
+.stats {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+
+}
+
+
+.stats h2,
+.voice h2,
+.cta h2 {
+
+    border-left: 6px solid #1d3d72;
+
+    padding-left: 15px;
+
+    margin-bottom: 30px;
+
+    font-size: 2rem;
+
+}
+
+
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    text-align: center;
+
+}
+
+
+
+.stat {
+
+    background:
+
+        linear-gradient(135deg,
+            #1d3d72,
+            #4a90e2);
+
+    color: white;
+
+    padding: 35px 20px;
+
+    border-radius: 15px;
+
+    transition: .3s;
+
+}
+
+
+
+.stat:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 15px 30px rgba(29, 61, 114, .3);
+
+}
+
+
+
+.stat h3 {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+/* =========================
+   STUDENT VOICE
+========================= */
+
+
+.voice {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+
+}
+
+
+
+.voice-card {
+
+
+    background:
+
+        linear-gradient(135deg,
+            #f5f9ff,
+            #ffffff);
+
+
+    border-left: 7px solid #4a90e2;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+
+    box-shadow:
+
+        0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+
+
+.voice-card span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    color: #1d3d72;
+
+    font-weight: bold;
+
+}
+
+.cta {
+
+    max-width: 1100px;
+
+    margin: 0 auto 60px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+
+    background:
+
+        linear-gradient(135deg,
+            #eef5ff,
+            #ffffff);
+
+
+    border-radius: 20px;
+
+}
+
+
+
+.cta h2 {
+
+    border: none;
+
+    padding: 0;
+
+}
+
+
+
+.cta p {
+
+    margin-top: 20px;
+
+}
+
+.medical-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+.medical-card {
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #f8eeee);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #ead0d0;
+
+    transition: .3s;
+
+    min-height: 230px;
+
+}
+
+
+
+.medical-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(180, 60, 60, .2);
+
+    border-color: #b84c4c;
+
+}
+
+
+
+.medical-card span {
+
+    color: #b84c4c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.medical-card h3 {
+
+    margin: 15px 0;
+
+    color: #8f3030;
+
+}
+
+
+
+
+
+/* =========================
+   MEDICAL TRAINING ROAD
+========================= */
+
+
+.medical-flow {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+
+.medical-step {
+
+    flex: 1;
+
+    background:
+
+        linear-gradient(135deg,
+            #b84c4c,
+            #d98787);
+
+    color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+
+
+.medical-step:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 10px 25px rgba(0, 0, 0, .2);
+
+}
+
+
+
+.medical-step span {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #ffe2e2;
+
+}
+
+
+
+.medical-step h3 {
+
+    margin: 15px 0;
+
+}
+
+/* =========================
+   DATA OF MEDICINE
+========================= */
+
+
+.medical-stats {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+
+}
+
+
+
+.medical-stats h2 {
+
+    border-left: 6px solid navy;
+
+    padding-left: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.medical-stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    text-align: center;
+
+}
+
+
+
+.medical-stat {
+
+    background: #b84c4c;
+
+    color: white;
+
+    padding: 35px 20px;
+
+    border-radius: 15px;
+
+    transition: .3s;
+
+}
+
+
+
+.medical-stat:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+.medical-stat h3 {
+
+    font-size: 45px;
+
+}
+
+.skill-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.skill {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #334155;
+
+    transition: .3s;
+
+}
+
+
+.skill:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #00e5ff;
+
+    box-shadow: 0 0 20px #00e5ff;
+
+}
+
+
+.skill span {
+
+    color: #00e5ff;
+
+    font-size: 13px;
+
+}
+
+/* ==========================
+   PLAYER GROWTH SYSTEM
+========================== */
+
+.facility-curriculum {
+    background:
+        linear-gradient(135deg,
+            #0b1020,
+            #162447);
+
+    color: white;
+
+    border-radius: 20px;
+}
+
+
+.facility-curriculum h2 {
+    color: white;
+    border-left: 6px solid #00e5ff;
+}
+
+
+.level {
+    background: rgba(255, 255, 255, .08);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    transition: .3s;
+}
+
+
+.level:hover {
+    transform: translateY(-5px);
+
+    border-color: #00e5ff;
+}
+
+
+.level h3 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+
+.facility-bar {
+
+    width: 100%;
+
+    height: 22px;
+
+    background: #050505;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+}
+
+
+.facility-fill {
+
+    height: 100%;
+
+    width: 0;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(90deg,
+            #00e5ff,
+            #7c4dff);
+
+    box-shadow:
+        0 0 15px #00e5ff;
+
+    transition:
+        width 1.8s ease;
+
+}
+
+
+/* スクロール表示時 */
+
+.facility-curriculum.show .level1 {
+    width: 25%;
+}
+
+
+.facility-curriculum.show .level2 {
+    width: 50%;
+}
+
+
+.facility-curriculum.show .level3 {
+    width: 75%;
+}
+
+
+.facility-curriculum.show .level4 {
+    width: 100%;
+}
+
+.final {
+
+    border: 2px solid gold;
+
+}
+
+
+.final .facility-fill {
+
+    background:
+        linear-gradient(90deg,
+            gold,
+            orange);
+
+    box-shadow:
+        0 0 20px gold;
+
+}
+
+
+
+
+
+
+
+.e-stat {
+
+    background:
+        linear-gradient(135deg,
+            #111827,
+            #1d3d72);
+
+    border:
+
+        1px solid #00e5ff;
+
+    box-shadow:
+
+        0 0 20px rgba(0, 229, 255, .25);
+
+        border-radius: 12px;
+}
+.e-stat h3 {
+
+    font-size: 45px;
+
+    color: #00e5ff;
+
+    text-shadow:
+
+        0 0 15px #00e5ff;
+
+}
+.e-stat p{
+    color:white;
+}
+.e-stats{
+        max-width: 1100px;
+        margin: auto;
+        padding: 60px 20px;
+    }
+.e-stats h2{
+    border-left: 6px solid #1d3d72;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.e-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.career ul {
+
+    padding: 0;
+
+}
+
+
+.career li {
+
+    display: inline-block;
+
+    list-style: none;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    margin: 8px;
+
+    border-radius: 30px;
+
+    border: 1px solid #334155;
+
+    transition: .3s;
+
+}
+
+
+.career li:hover {
+
+    background: #00e5ff;
+
+    color: #111;
+
+    box-shadow:
+
+        0 0 15px #00e5ff;
+
+}
+
+.e-voice-card {
+
+    background:
+        linear-gradient(135deg,
+            #111827,
+            #1d3d72);
+
+    color: white;
+
+    padding: 35px;
+    
+    border-radius: 15px;
+    
+    font-size: 18px;
+    
+    border-left:
+        6px solid #00e5ff;
+
+}
+.e-voice-card span {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.e-cta {
+
+    background:
+
+        linear-gradient(135deg,
+            #00e5ff,
+            #7c4dff);
+
+    color: white;
+
+}
+
+.e-stat:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color: #00e5ff;
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, .5);
+
+}
+
+/* ===== モバイル端末対応（追記） ===== */
+@media (max-width: 768px) {
+
+    /* ヘッダー */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    /* ナビを縦並びに */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    /* スライダー高さ調整 */
+    #slider {
+        height: 250px;
+    }
+
+    /* カード幅調整 */
+    .card {
+        width: 90%;
+    }
+
+    /* 施設レイアウト縦並び */
+    .facility {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .facility img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 画像サイズ調整 */
+    .menu-item {
+        width: 90%;
+    }
+
+    /* iframe調整 */
+    iframe {
+        height: 250px;
+    }
+
+    /* section余白少し減らす */
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+}
