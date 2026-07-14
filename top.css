@@ -1820,6 +1820,7 @@ button:hover {
         height: auto;
     }
 
+    .e-stats-grid,
     .medical-grid,
     .tech-grid {
         display:grid;
@@ -1834,6 +1835,7 @@ button:hover {
         /* ←2列 */
         gap: 15px;
     }
+    .skill-grid,
     .medical-stats-grid,
     .stats-grid{
         display:grid;
