@@ -1820,25 +1820,20 @@ button:hover {
         height: auto;
     }
 
-    .facility-card {
-        width: 100%;
-        height: auto;
+    .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+       /* ←2列 */
+    gap: 15px;
     }
-    .facility-card img {
-        width: 100%;
-        height: auto;
+    .roadmap {
+    grid-template-columns: repeat(2, 1fr);
+        /* ←2列 */
+        gap: 15px;
     }
-    .tech-card{
-        width: 100%;
-        height: auto;
-    }
-    .step{
-        width: 100%;
-        height: auto;
-    }
-    .stat{
-        width: 100%;
-        height: auto;
+    .stats-grid{
+        grid-template-columns: repeat(2, 1fr);
+            /* ←2列 */
+            gap: 15px;
     }
     /* 画像サイズ調整 */
     .menu-item {
