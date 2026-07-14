@@ -1822,6 +1822,7 @@ button:hover {
 
     .medical-grid,
     .tech-grid {
+        display:grid;
     grid-template-columns: repeat(2, 1fr);
        /* ←2列 */
     gap: 15px;
@@ -1835,6 +1836,7 @@ button:hover {
     }
     .medical-stats-grid,
     .stats-grid{
+        display:grid;
         grid-template-columns: repeat(2, 1fr);
             /* ←2列 */
             gap: 15px;
