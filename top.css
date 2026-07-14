@@ -1828,6 +1828,18 @@ button:hover {
         width: 100%;
         height: auto;
     }
+    .tech-card{
+        width: 100%;
+        height: auto;
+    }
+    .step{
+        width: 100%;
+        height: auto;
+    }
+    .stat{
+        width: 100%;
+        height: auto;
+    }
     /* 画像サイズ調整 */
     .menu-item {
         width: 90%;
