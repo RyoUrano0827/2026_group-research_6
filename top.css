@@ -1835,6 +1835,14 @@ button:hover {
             /* ←2列 */
             gap: 15px;
     }
+    .facility-overlay {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .facility-card {
+        width: 100%;
+    }
     /* 画像サイズ調整 */
     .menu-item {
         width: 90%;
