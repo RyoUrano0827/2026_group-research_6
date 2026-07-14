@@ -528,6 +528,7 @@ summary:hover {
     .event-detail img {
 
         height: 220px;
+        width: 100%;
 
     }
 }
@@ -1819,6 +1820,14 @@ button:hover {
         height: auto;
     }
 
+    .facility-card {
+        width: 100%;
+        height: auto;
+    }
+    .facility-card img {
+        width: 100%;
+        height: auto;
+    }
     /* 画像サイズ調整 */
     .menu-item {
         width: 90%;
